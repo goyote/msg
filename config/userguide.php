@@ -15,10 +15,10 @@ return array(
             'name' => 'MSG',
 
             // A short description of this module, shown on the index page
-            'description' => '',
+            'description' => 'A robust blurb (or "flash") messaging system for KO3.',
 
             // Copyright message, shown in the footer for this module
-            'copyright' => '&copy; 2010–2011 <Your Name>',
+            'copyright' => '&copy; 2011 Gregorio Ramirez',
         )
     )
 );

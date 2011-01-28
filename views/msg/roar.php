@@ -1,13 +1,13 @@
 <?php defined('SYSPATH') or die('No direct script access.') ?>
 <html>
 	<head>
-		<link type="text/css" rel="stylesheet" href="/modules/msg/assets/css/Roar.css" />
+		<link type="text/css" rel="stylesheet" href="/modules/msg/media/css/Roar.css" />
 	</head>
 	<body>
 		Example page (in the real world, you might want to escape the output ;))
-		<script type="text/javascript" src="/modules/msg/assets/js/mootools-core.js"></script>
-		<script type="text/javascript" src="/modules/msg/assets/js/mootools-more.js"></script>
-		<script type="text/javascript" src="/modules/msg/assets/js/Roar.js"></script>
+		<script type="text/javascript" src="/modules/msg/media/js/mootools-core.js"></script>
+		<script type="text/javascript" src="/modules/msg/media/js/mootools-more.js"></script>
+		<script type="text/javascript" src="/modules/msg/media/js/Roar.js"></script>
 		<script type="text/javascript">
 		window.addEvent('domready', function() {
 			(function() {
