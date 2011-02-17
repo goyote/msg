@@ -148,3 +148,4 @@ You can modify the default view `msg/all` by copy-pasting a copy into your `appl
     MSG::WARNING
     MSG::SUCCESS
     MSG::ACCESS
+    MSG::CRITICAL

@@ -3,26 +3,28 @@
 return array(
 	'session' => array(
 		/**
-		 * Defines the storage medium in which the message(s) will be stored,
-		 * 'session' and 'cookie' are supported.
-		 */
-		'storage_medium' => 'session',
-		
-		/**
-		 * Session key or cookie name in which to store the messages.
+		 * The session key that will hold the messages.
 		 */
 		'storage_key' => 'msg',
+		
+		/**
+		 * You don't need to tweak this unless you're creating a
+		 * new config array, e.g. a database driver would be TRUE 
+		 * because you would only want to write to the db once.
+		 */
+		'handicap' => FALSE,
 	),
 	'cookie' => array(
 		/**
-		 * Defines the storage medium in which the message(s) will be stored,
-		 * 'session' and 'cookie' are supported.
-		 */
-		'storage_medium' => 'cookie',
-		
-		/**
-		 * Session key or cookie name in which to store the messages.
+		 * The name of the browser cookie that will hold the messages.
 		 */
 		'storage_key' => 'msg',
+		
+		/**
+		 * You don't need to tweak this unless you're creating a
+		 * new config array, e.g. a database driver would be TRUE 
+		 * because you would only want to write to the db once.
+		 */
+		'handicap' => TRUE,
 	),
 );

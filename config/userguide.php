@@ -15,7 +15,7 @@ return array(
             'name' => 'MSG',
 
             // A short description of this module, shown on the index page
-            'description' => 'A robust blurb (or "flash") messaging system for KO3.',
+            'description' => 'Blurb (or "flash") messaging system for the Kohana framework.',
 
             // Copyright message, shown in the footer for this module
             'copyright' => '&copy; 2011 Gregorio Ramirez',
