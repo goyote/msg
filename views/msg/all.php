@@ -5,4 +5,3 @@
 		</li>
 	<?php endforeach ?>
 </ul>
-</ul>

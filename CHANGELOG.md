@@ -11,3 +11,4 @@
 - Switched to MIT license
 - MSG is abstract
 - Changed `ul.id` to `ul.class` for re-use
+- Render won't escape by default
