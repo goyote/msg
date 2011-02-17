@@ -18,6 +18,8 @@ class MSG_Driver_Cookie extends MSG {
 	 */
 	protected function __construct(array $config)
 	{
+		parent::__construct($config);
+
 		// Write messages once on shutdown
 		register_shutdown_function(array($this, 'write_cookie'));
 
@@ -26,8 +28,6 @@ class MSG_Driver_Cookie extends MSG {
 			// Avoid serializing a NULL value (which would return FALSE)
 			$this->_messages = unserialize($messages);
 		}
-
-		parent::__construct($config);
 	}
 
 	/**
