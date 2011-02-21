@@ -76,10 +76,9 @@ abstract class MSG_Core {
 			{
 				// Overload the default configuration
 				$config += $settings;
-				
 			}
 
-			// Build the class name
+			// Add the driver prefix
 			$class = 'MSG_Driver_'.ucfirst($name);
 			
 			MSG::$_instances[$name] = new $class($config);
