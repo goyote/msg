@@ -13,16 +13,40 @@
  */
 class MSGTest extends Kohana_Unittest_TestCase {
 
-	/**
-	 * Start fresh each test.
-	 */
 	public function setUp()
 	{
+		parent::setUp();
 		Session::instance()->destroy();
 		Cookie::delete('msg');
+	}
+
+	public function tearDown()
+	{
+		parent::tearDown();
 		MSG::instance(MSG::SESSION)->delete();
 		MSG::instance(MSG::COOKIE)->delete();
-		parent::setUp();
+	}
+
+	/**
+	 * @test
+	 */
+	public function test_getting_messages_with_the_cookie_driver()
+	{
+		// Cookies are retrieved once in the constructor, so this may be
+		// the only chance I get to test the cookie driver.
+		$key = 'msg';
+		$type = MSG::ERROR;
+		$text = 'LOLWUT?';
+		$value = serialize(array(
+			array(
+				'type' => $type,
+				'text' => $text,
+			),
+		));
+		$_COOKIE[$key] = Cookie::salt($key, $value).'~'.$value;
+		$message = MSG::instance(MSG::COOKIE)->get();
+		$this->assertSame($type, $message[0]['type']);
+		$this->assertSame($text, $message[0]['text']);
 	}
 
 	/**
